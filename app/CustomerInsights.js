@@ -37,6 +37,13 @@ export function CustomerInsights() {
       customers: [
         { custcd: "1", customer: "Customer A" },
         { custcd: "2", customer: "Customer B" },
+        { custcd: "3", customer: "Customer C" },
+        { custcd: "4", customer: "Customer D" },
+        { custcd: "5", customer: "Customer E" },
+        { custcd: "6", customer: "Customer F" },
+        { custcd: "7", customer: "Customer G" },
+        { custcd: "8", customer: "Customer H" },
+        { custcd: "9", customer: "Customer I" },
       ]
     }
   ];
