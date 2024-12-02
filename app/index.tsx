@@ -15,6 +15,8 @@ import {
 import { Progress } from '~/components/ui/progress';
 import { Tooltip, TooltipContent, TooltipTrigger } from '~/components/ui/tooltip';
 import ActionCards from './ActionCards';
+import { Separator } from '~/components/ui/separator';
+import { CustomerInsights } from './CustomerInsights';
 
 const GITHUB_AVATAR_URI =
   'https://i.pinimg.com/originals/ef/a2/8d/efa28d18a04e7fa40ed49eeb0ab660db.jpg';
@@ -26,8 +28,9 @@ export default function Screen() {
     setProgress(Math.floor(Math.random() * 100));
   }
   return (
-    <View className='flex-1 justify-center items-center gap-5 p-6 bg-secondary/30'>
-<ActionCards></ActionCards>
+    <View className='flex-1 items-center gap-5 p-6 bg-secondary/30'>
+      <CustomerInsights />
+
       <Card className='w-full max-w-sm p-6 rounded-2xl'>
         <CardHeader className='items-center'>
           <Avatar alt="Rick Sanchez's Avatar" className='w-24 h-24'>

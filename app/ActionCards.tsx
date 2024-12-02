@@ -44,7 +44,7 @@ interface ActionCardProps {
   card: ActionCard;
 }
 
-const CARD_WIDTH = 350;
+const CARD_WIDTH = Dimensions.get('screen').width - 48;
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 
 const initialActionCards: ActionCard[] = [
@@ -61,7 +61,7 @@ const initialActionCards: ActionCard[] = [
 ];
 
 const ActionCard: React.FC<ActionCardProps> = ({ card }) => (
-  <Card className="flex flex-col h-full w-[350px]">
+  <Card className="rounded-2xl">
     <CardHeader>
       <View className="flex justify-between items-start">
         <View>
@@ -161,17 +161,18 @@ const ActionCards: React.FC = () => {
   const [actionCards, setActionCards] = useState<ActionCard[]>(initialActionCards);
 
   return (
-    <View className="w-full max-w-[1140px] mx-auto px-4 relative overflow-visible">
+    <View className="w-full max-w-sm relative h-[500px]">
       <Animated.ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
         snapToInterval={CARD_WIDTH}
         scrollEventThrottle={16}
         decelerationRate={0}
-        contentContainerStyle={{ paddingHorizontal: 16 }}
+        contentContainerStyle={{ paddingHorizontal: 0 }}
+        className="h-full"
       >
         {actionCards.map((card) => (
-          <View key={card.id} className="p-1" style={{ width: CARD_WIDTH }}>
+          <View key={card.id} style={{ width: CARD_WIDTH }}>
             <ActionCard card={card} />
           </View>
         ))}
