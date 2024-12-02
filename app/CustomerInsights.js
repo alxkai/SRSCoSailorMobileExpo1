@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { View, ScrollView } from 'react-native';
 import { Text } from '~/components/ui/text';
 import {
@@ -11,8 +11,14 @@ import {
 } from "~/components/ui/card";
 import { Badge } from "~/components/ui/badge";
 import { Separator } from "~/components/ui/separator";
+import { DataContext } from './contexts/DataContext';
 
 export function CustomerInsights() {
+  const { customerInsights = [] } = useContext(DataContext) || {};
+  
+  // Add console log to check data
+  console.log('Customer Insights Data:', customerInsights);
+  
   const badgeColors = {
     "Low Digital Revenue Pct": "default",
     "Purchase Frequency Drop": "secondary",

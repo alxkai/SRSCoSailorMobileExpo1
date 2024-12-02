@@ -12,6 +12,7 @@ export const DataProvider = ({ children }) => {
   const [customerDailySales, setCustomerDailySales] = useState([]);
   const [customerConfig, setCustomerConfig] = useState({});
   const [customerRebate, setCustomerRebate] = useState({});
+  const [aggregateInsights, setAggregateInsights] = useState([]);
 
   const fetchCustomerRebate = async () => {
     try {
@@ -117,7 +118,6 @@ export const DataProvider = ({ children }) => {
   const [customerReportData, setCustomerReportData] = useState([]);
   const [customerReportPriorityData, setCustomerReportPriorityData] = useState([]);
 
-  const [aggregateInsights, setAggregateInsights] = useState([]);
   const [insightPercent, setInsightPercent] = useState([]);
   const [sales30, setSales30] = useState(null);
   const [salesYear, setSalesYear] = useState(null);
@@ -322,12 +322,12 @@ export const DataProvider = ({ children }) => {
   return (
     <DataContext.Provider value={{
       customerInsights,
+      aggregateInsights,
       setCustomerInsights,
       customerProfilePage,
       customerDailySales,
       customerReportPriorityData,
       customerReportData,
-      aggregateInsights,
       insightPercent,
       sales30,
       salesYear,
