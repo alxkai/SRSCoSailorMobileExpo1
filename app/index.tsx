@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ScrollView } from 'react-native';
 import Animated, { FadeInUp, FadeOutDown, LayoutAnimationConfig } from 'react-native-reanimated';
 import { Info } from '~/lib/icons/Info';
 import { Avatar, AvatarFallback, AvatarImage } from '~/components/ui/avatar';
@@ -28,7 +28,11 @@ export default function Screen() {
     setProgress(Math.floor(Math.random() * 100));
   }
   return (
-    <View className='flex-1 items-center gap-5 p-6 bg-secondary/30'>
+    <ScrollView 
+      className='flex-1 bg-secondary/30'
+      contentContainerClassName='items-center gap-5 p-6'
+      showsVerticalScrollIndicator={true}
+    >
       <CustomerInsights />
 
       <Card className='w-full max-w-sm p-6 rounded-2xl'>
@@ -94,6 +98,6 @@ export default function Screen() {
           </Button>
         </CardFooter>
       </Card>
-    </View>
+    </ScrollView>
   );
 }
