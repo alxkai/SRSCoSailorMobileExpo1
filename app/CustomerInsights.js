@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { View, ScrollView } from 'react-native';
-import { Text } from '~/components/ui/text';
+import { Text } from '~/components/ui/shadcn/text';
 import {
   Card,
   CardContent,
@@ -8,9 +8,9 @@ import {
   CardHeader,
   CardTitle,
   CardFooter,
-} from "~/components/ui/card";
-import { Badge } from "~/components/ui/badge";
-import { Separator } from "~/components/ui/separator";
+} from "~/components/ui/shadcn/card";
+import { Badge } from "~/components/ui/shadcn/badge";
+import { Separator } from "~/components/ui/shadcn/separator";
 
 export function CustomerInsights() {
   

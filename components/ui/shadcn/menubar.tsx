@@ -6,7 +6,7 @@ import { ChevronDown } from '~/lib/icons/ChevronDown';
 import { ChevronRight } from '~/lib/icons/ChevronRight';
 import { ChevronUp } from '~/lib/icons/ChevronUp';
 import { cn } from '~/lib/utils';
-import { TextClassContext } from '~/components/ui/text';
+import { TextClassContext } from '~/components/ui/shadcn/text';
 
 const MenubarMenu = MenubarPrimitive.Menu;
 

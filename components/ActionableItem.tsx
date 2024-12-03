@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/card';
-import { Badge } from '~/components/ui/badge';
+import { Card, CardHeader, CardTitle, CardContent } from '~/components/ui/shadcn/card';
+import { Badge } from '~/components/ui/shadcn/badge';
 
 type Priority = 'High' | 'Medium' | 'Low';
 

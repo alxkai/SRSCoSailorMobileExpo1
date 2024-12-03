@@ -1,8 +1,8 @@
 import { VariantProps } from 'class-variance-authority';
 import type { LucideIcon } from 'lucide-react-native';
 import * as React from 'react';
-import { toggleTextVariants, toggleVariants } from '~/components/ui/toggle';
-import { TextClassContext } from '~/components/ui/text';
+import { toggleTextVariants, toggleVariants } from '~/components/ui/shadcn/toggle';
+import { TextClassContext } from '~/components/ui/shadcn/text';
 import * as ToggleGroupPrimitive from '@rn-primitives/toggle-group';
 import { cn } from '~/lib/utils';
 
