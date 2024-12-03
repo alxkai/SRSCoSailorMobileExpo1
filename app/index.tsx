@@ -8,7 +8,7 @@ import ActionableItem from '~/components/ActionableItem';
 type Priority = 'High' | 'Medium' | 'Low';
 
 const actionableItems: { id: number; title: string; priority: Priority }[] = [
-  { id: 1, title: 'Review Q2 Sales Report', priority: 'High' },
+  { id: 1, title: 'cReview Q2 Sales Report', priority: 'High' },
   { id: 2, title: 'Schedule Team Meeting', priority: 'Medium' },
   { id: 3, title: 'Follow up with Key Accounts', priority: 'High' },
   { id: 4, title: 'Prepare Monthly Forecast', priority: 'Medium' },
@@ -25,6 +25,7 @@ export default function App() {
           {actionableItems.map((item) => (
             <ActionableItem key={item.id} title={item.title} priority={item.priority} />
           ))}
+          
         </ScrollView>
         <Footer />
       </SafeAreaView>
